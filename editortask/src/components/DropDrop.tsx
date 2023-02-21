@@ -1,39 +1,58 @@
 import React, { useState } from 'react'
 
-
+const PHOTO_URL = "https://cdn.britannica.com/18/137318-050-29F7072E/rooster-Rhode-Island-Red-roosters-chicken-domestication.jpg";
 
 const DropDrop = () => {
-
-    const [dragOver, setDragOver] = React.useState(false);
-    const [content, setContent] = React.useState<string>("Drop here");
-    const handleDragStart = () => setDragOver(true);
-    const handleDragEnd = () => setDragOver(false);
-
-    const dragStart = (e: React.DragEvent<HTMLDivElement>) => {
-        e.dataTransfer.setData('text', e.currentTarget.id)
-    }
-    const enableDrag = (e: React.DragEvent<HTMLDivElement>) => {
-        e.preventDefault()
-    }
-    const dropHandler = (e: React.DragEvent<HTMLDivElement>) => {
-        const id = e.dataTransfer.getData('text');
-        console.log(`Dropped Element with id : ${id}`)
-        setDragOver(false);
-    }
+    // The content of the target box
+    const [content, setContent] = useState<string>("Drop Something Here");
+  
+    // The data being dragged
+    const [dragData, setDragData] = useState<string>("");
+  
+    // This function will be triggered when you start dragging
+    const dragStartHandler = (
+      event: React.DragEvent<HTMLDivElement>,
+      data: string
+    ) => {
+      event.dataTransfer.setData("text", data);
+      setDragData(data);
+    };
+  
+    // This function will be triggered when dropping
+    const dropHandler = (event: React.DragEvent<HTMLDivElement>) => {
+      event.preventDefault();
+      const data = event.dataTransfer.getData("text");
+      setContent(data);
+    };
+  
+    // This makes the third box become droppable
+    const allowDrop = (event: React.DragEvent<HTMLDivElement>) => {
+      event.preventDefault();
+    };
+  
     return (
-
-        <div>
-            <div id='d1' draggable="true" onDragStart={dragStart}>Drag</div>
-            <div id='d2' draggable="true" onDragStart={dragStart}>Draggg</div>
-            <div
-                onDragOver={enableDrag}
-                onDrop={dropHandler}
-                onDragEnter={handleDragStart}
-                onDragLeave={handleDragEnd}
-                style={dragOver ? { backgroundColor: 'red' } : {}}
-            >Drop Here</div>
+      <div className="container">
+        <div
+          className="box1"
+          onDragStart={(event) => dragStartHandler(event, PHOTO_URL)}
+          draggable={true}
+        >
+          <img src={PHOTO_URL} alt="Cute Dog" />
         </div>
-    )
-}
+  
+        <div
+          className="box2"
+          onDragStart={(event) => dragStartHandler(event, dragData)}
+          draggable={true}
+        >
+          <h2><input onChange={(e) => setDragData(e.target.value)}/></h2>
+        </div>
+  
+        <div className="box3" onDragOver={allowDrop} onDrop={dropHandler}>
+          {content.endsWith(".jpeg") ? <img src={content} /> : <h2>{content}</h2>}
+        </div>
+      </div>
+    );
+  };
 
 export default DropDrop
