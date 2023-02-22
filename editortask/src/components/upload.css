@@ -2,12 +2,10 @@
     margin: auto;
     width: 50%; /* update this to 50% */
     height: 500px;
-    border: 1px solid red;
     float: right; /* add this to align the box to the right */
   }
   
   .widget {
-    border: solid 1px #f80e0e;
     margin-top: 10px;
     width: 50%;
     color: red;
