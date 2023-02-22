@@ -1,12 +1,20 @@
 
 
+
+
 # Test Task : "Editor"  
+
+
+
+https://user-images.githubusercontent.com/110802852/220618838-9b0a6710-18c5-4219-9534-b02c57a8ee13.mp4
+
+
 
 # Goals
 
 ## On the left side you we want a sidebar area, this area has two elements text and image. Element move according to principle drag and drop. Dragging and element from the sidebar to work space should create the element in the workspace and be unlimited not limited. 
 
-
+ 
 # Challenges 
 
 ## Psuedo code was my main challenge figuring out which way to approach as it was fully limited to all Typescript and React only without libraries. 
