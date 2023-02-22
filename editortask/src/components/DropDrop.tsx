@@ -39,6 +39,8 @@ const DropDrop = () => {
     const files = event.target.files;
     if (files && files.length > 0) {
       setUploadedFile(files[0]);
+      console.log(files[0]);
+      console.log("Uploaded file: " + files[0].name);
     }
   };
 
@@ -51,7 +53,7 @@ const DropDrop = () => {
         onDragStart={(event) => dragStartHandler(event, dragData)}
         draggable={true}
       >
-        <input type="file" onChange={handleFileUpload} />
+        <input placeholder='Choose file' type="file" onChange={handleFileUpload} />
       </div>
 
       <div
@@ -60,7 +62,7 @@ const DropDrop = () => {
         draggable={true}
       >
         <h2>
-          <input onChange={(e) => setDragData(e.target.value)} />
+          <input placeholder='Type Here' onChange={(e) => setDragData(e.target.value)} />
         </h2>
       </div>
         </section>
