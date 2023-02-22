@@ -1,0 +1,42 @@
+.box3 {
+    margin: auto;
+    width: 50%; /* update this to 50% */
+    height: 500px;
+    border: 1px solid red;
+    float: right; /* add this to align the box to the right */
+  }
+  
+  .widget {
+    border: solid 1px #f80e0e;
+    margin-top: 10px;
+    width: 50%;
+    color: red;
+    height: 150px;
+  }
+  
+  .imgContainer {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .box2 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .workzone {
+    margin: 0; /* update this to 0 */
+    width: 25%; /* update this to 50% */
+    height: 500px;
+    border: 1px solid red;
+    float: left; /* add this to align the workzone to the left */
+  }
+
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones     */
+    
+ 
+    .box3 {
+        width: 50%;
+    }
+
+}
