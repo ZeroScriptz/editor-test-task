@@ -7,6 +7,8 @@
 ## On the left side you we want a sidebar area, this area has two elements text and image. Element move according to principle drag and drop. Dragging and element from the sidebar to work space should create the element in the workspace and be unlimited not limited. 
 
 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+ 
 # Challenges 
 
 ## Psuedo code was my main challenge figuring out which way to approach as it was fully limited to all Typescript and React only without libraries. 
