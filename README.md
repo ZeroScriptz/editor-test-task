@@ -1,12 +1,19 @@
 
 
+
+
 # Test Task : "Editor"  
+
+
+
+https://user-images.githubusercontent.com/110802852/220618838-9b0a6710-18c5-4219-9534-b02c57a8ee13.mp4
+
+
 
 # Goals
 
 ## On the left side you we want a sidebar area, this area has two elements text and image. Element move according to principle drag and drop. Dragging and element from the sidebar to work space should create the element in the workspace and be unlimited not limited. 
 
-<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/ap7s32" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
  
 # Challenges 
 
